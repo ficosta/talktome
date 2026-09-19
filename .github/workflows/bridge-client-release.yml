@@ -16,6 +16,8 @@ permissions:
 
 jobs:
   build:
+    # Windows disabled: GitHub-hosted Windows minutes are billed 2x. Remove this `if` to re-enable.
+    if: false
     name: Build Bridge ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
     strategy:
