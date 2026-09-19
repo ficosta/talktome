@@ -22,11 +22,12 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: macOS arm64
-            os: macos-14
-            ffmpeg_source: macos-lgpl
-            artifact_name: talktome_bridge_macos_arm64
-            artifact_glob: bridge-client/src-tauri/target/release/bundle/dmg/*.dmg
+          # macOS disabled: GitHub-hosted macOS minutes are billed 10x. Uncomment to re-enable.
+          # - name: macOS arm64
+          #   os: macos-14
+          #   ffmpeg_source: macos-lgpl
+          #   artifact_name: talktome_bridge_macos_arm64
+          #   artifact_glob: bridge-client/src-tauri/target/release/bundle/dmg/*.dmg
           - name: Windows x64
             os: windows-latest
             ffmpeg_source: windows-lgpl

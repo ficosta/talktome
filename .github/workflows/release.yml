@@ -30,13 +30,14 @@ jobs:
             executable_name: talktome_win64.exe
             artifact_prefix: talktome_server_windows_x64
             artifact_glob: server-app/src-tauri/target/release/bundle/nsis/*.exe
-          - name: macOS arm64
-            os: macos-14
-            build_script: build:mac_arm64
-            server_build_script: build:release:macos
-            executable_name: talktome_arm64
-            artifact_prefix: talktome_server_macos_arm64
-            artifact_glob: server-app/src-tauri/target/release/bundle/dmg/*.dmg
+          # macOS disabled: GitHub-hosted macOS minutes are billed 10x. Uncomment to re-enable.
+          # - name: macOS arm64
+          #   os: macos-14
+          #   build_script: build:mac_arm64
+          #   server_build_script: build:release:macos
+          #   executable_name: talktome_arm64
+          #   artifact_prefix: talktome_server_macos_arm64
+          #   artifact_glob: server-app/src-tauri/target/release/bundle/dmg/*.dmg
 
     steps:
       - name: Checkout
